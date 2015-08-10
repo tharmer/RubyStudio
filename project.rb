@@ -11,13 +11,13 @@ class Project
     @target = target
   end  
 
-  def add(dollars_in)
-    @amount = @amount + dollars_in
+  def add
+    @amount = @amount + 25
     "Project #{@name} got more funds!"
   end  
 
-  def remove(dollars_out)
-    @amount = @amount - dollars_out
+  def remove
+    @amount = @amount - 15
     "Project #{@name} lost some funds!"
   end
 
