@@ -38,5 +38,21 @@ describe Movie do
    it "has a rank of 0" do
      expect(@movie.rank).to eq 0
    end  
-
 end  
+
+
+context "with a rank of at least 10" do
+  before do
+    @movie = Movie.new("goonies", 10)
+  end
+  
+  it "is a hit" do
+  end  
+ end 
+  
+
+
+
+
+
+

@@ -36,5 +36,30 @@ describe Player do
   it "decreases health by 10 when blammed" do
   @player.blam
   expect(@player.health).to eq @health - 10
+  end
+
+  context "player has initial health of 150" do
+    before do
+    @player = Player.new("larry", 150)
+  end
+  it "is strong" do
+    expect(@player).to be_strong
+  end
+  end
+  context "player has initial health of 100" do
+    before do
+    @player = Player.new("moe", 100)
+  end
+  it "is weak" do
+    expect(@player).not_to be_strong
+  end
 end
 end
+
+
+
+
+
+
+
+
