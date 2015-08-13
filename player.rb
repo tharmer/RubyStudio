@@ -34,6 +34,10 @@ class Player
     puts "#{@name} got blammed!"
   end
   
+  def <=>(other)
+    other.score <=> score
+  end
+  
 end
 
 if __FILE__ == $0

@@ -11,13 +11,15 @@ class Playlist
     @movies << movie
   end  
     
-   def play
+   def play(viewings)
     puts "#{@name}'s playlist:"
     puts @movies
-    
+    1.upto(viewings) do |count|
+      puts "\nViewings #{count}"
     @movies.each do |movie|
       movie.thumbs_up
       puts movie
-   end    
+   end  
+   end  
   end 
 end
