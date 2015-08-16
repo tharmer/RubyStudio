@@ -1,6 +1,7 @@
 require_relative "player"
 require_relative "die"
 require_relative "gam_turn"
+require_relative "treasure_trove"  
 
 class Game
   
@@ -26,6 +27,12 @@ class Game
       def print_name_and_health(player)
         puts "#{player.name} (#{player.health})"
       end
+
+      treasures = TreasureTrove::TREASURES
+      puts
+      puts "There are #{treasures.size} treasures"
+      treasures.each {|treasure| puts "A #{treasure.name} is worth #{treasure.points} points"}
+
 
       def print_stats
         puts "\n#{@title} Statistics:"

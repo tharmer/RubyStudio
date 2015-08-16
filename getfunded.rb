@@ -1,3 +1,5 @@
+require_relative "pledgepool"
+
 class GetFunded
   
   attr_reader :title
@@ -16,5 +18,9 @@ class GetFunded
   @projects.each do |project|
     puts project
   end
-end
+  pledge = PledgePool::PLEDGES
+  puts
+  puts "There are #{pledge.size} possible pledge amounts:"
+  pledge.each {|pledge| puts"A #{pledge.name} pledge is worth #{pledge.amount}"}
+ end
 end
